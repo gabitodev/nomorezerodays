@@ -20,13 +20,14 @@ class SignIn extends React.Component {
 	render() {
 		return (
 			<div className="vh-100 dt w-100">
-				<main className="pa4 black-80 dtc v-mid tc">
+				<main className="pa4 black-80 dtc v-mid tc animated fadeIn">
 				  <form className="measure center ba b--light-silver pa4 bg-white tc">
 				    <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
 				      <legend className="f2 fw6 ph0 mh0">Sign In</legend>
 				      <div className="mt3">
 				        <label className="db fw6 tl lh-copy f6" htmlFor="email-address">Email</label>
-				        <input 
+				        <input
+									style={{outline: 'none'}}
 				        	className="pa2 f6 input-reset ba br2 bw1 b--light-silver bg-light-gray hover-bg-white hover-black w-100" 
 				        	type="email" 
 				        	name="email-address"  
@@ -34,17 +35,18 @@ class SignIn extends React.Component {
 				        />
 				      </div>
 				      <div className="mv3">
-				        <label className="db tl fw6 lh-copy f6" htmlFor="password">Password</label>
-                <div className='flex-auto flex flex-row b ba bw1 br2 b--light-silver bg-light-gray hover-bg-white hover-black w-100'>
-                  <input 
-                  className="pa2 input-reset bn bg-light-gray hover-bg-white hover-black w-100" 
-                  type={this.state.type}
-                  name="password"  
-                  id="password"
-                  />
-                  <span className="pointer pa2 input-reset bn bg-light-gray hover-bg-light-red hover-white" 
-                  	onClick={this.showHide}>{this.state.type === 'text' ? <ion-icon className='tc v-mid' name="eye"></ion-icon> : <ion-icon name="eye-off"></ion-icon>}</span>
-                </div>
+								<label className="db tl fw6 lh-copy f6" htmlFor="password">Password</label>
+								<div className='flex-auto flex flex-row b ba bw1 br2 b--light-silver bg-light-gray hover-bg-white hover-black w-100'>
+									<input
+										style={{outline: 'none'}}
+										className="pa2 input-reset bn bg-light-gray hover-bg-white hover-black w-100" 
+										type={this.state.type}
+										name="password"  
+										id="password"
+									/>
+									<span className="pointer pa2 input-reset bn bg-light-gray hover-bg-light-red hover-white" 
+										onClick={this.showHide}>{this.state.type === 'text' ? <ion-icon className='tc v-mid' name="eye"></ion-icon> : <ion-icon name="eye-off"></ion-icon>}</span>
+								</div>
 				      </div>
 				    </fieldset>
 				    <div className="">
