@@ -1,5 +1,6 @@
 import React from 'react';
 import SignIn from './components/signin/SignIn';
+import SignUp from './components/signup/SignUp';
 import Landing from './components/landing/Landing';
 import './App.css';
 import Particles from 'react-particles-js';
@@ -25,11 +26,7 @@ class App extends React.Component {
   }
 
   onRouteChange = (route) => {
-    if (route === 'welcome') {
-      this.setState({route: route})
-    } else if (route === 'signin') {
-      this.setState({route: 'signin'})
-    }
+    this.setState({route: route});
   }
 
   render() {
@@ -41,7 +38,7 @@ class App extends React.Component {
     			: (
     					this.state.route === 'signin' 
     					? <SignIn /> 
-    					: 'jeje'
+    					: <SignUp />
     				)
     		}
 			</div>    
