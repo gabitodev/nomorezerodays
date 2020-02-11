@@ -20,7 +20,7 @@ class Landing extends React.Component {
 				      	className="sign_in b ph3 pv2 input-reset dib link bw1 b--solid b--black black fw7 pa3 br3 hover-white hover-bg-black pointer" 
 				      	type="submit" 
 				      	value="Sign Up"
-								onClick={() => onRouteChange('register')}
+						onClick={() => onRouteChange('register')}
 			      	/>
 				    </div>
 			  	</div>

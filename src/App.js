@@ -37,7 +37,7 @@ class App extends React.Component {
     			? <Landing onRouteChange={this.onRouteChange} />
     			: (
     					this.state.route === 'signin' 
-    					? <SignIn /> 
+    					? <SignIn onRouteChange={this.onRouteChange} /> 
     					: <SignUp />
     				)
     		}

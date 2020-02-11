@@ -18,6 +18,7 @@ class SignIn extends React.Component {
   }
 
 	render() {
+		const { onRouteChange } = this.props;
 		return (
 			<div className="vh-100 dt w-100">
 				<main className="pa4 black-80 dtc v-mid tc animated fadeIn">
@@ -57,7 +58,10 @@ class SignIn extends React.Component {
 				      />
 				    </div>
 				    <div className="lh-copy mt3">
-				      <a href="#0" className="f6 link dim black db">Sign up</a>
+				      <a 
+								href="#0" 
+								className="f6 link dim black db"
+								onClick={() => onRouteChange('register')}>Sign up</a>
 				      <a href="#0" className="f6 link dim black db">Forgot your password?</a>
 				    </div>
 				  </form>
