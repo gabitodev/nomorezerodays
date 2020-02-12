@@ -55,13 +55,14 @@ class SignIn extends React.Component {
 				      	className="b ph3 pv2 input-reset dib link bw1 bg-white b--solid b--light-red light-red fw7 pa3 br3 hover-white hover-bg-light-red pointer" 
 				      	type="submit" 
 				      	value="Sign in"
+				      	onClick={() => onRouteChange('welcome')}
 				      />
 				    </div>
 				    <div className="lh-copy mt3">
 				      <a 
 								href="#0" 
 								className="f6 link dim black db"
-								onClick={() => onRouteChange('register')}>Sign up</a>
+								onClick={() => onRouteChange('signup')}>Sign up</a>
 				      <a href="#0" className="f6 link dim black db">Forgot your password?</a>
 				    </div>
 				  </form>

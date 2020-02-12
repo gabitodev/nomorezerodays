@@ -18,6 +18,7 @@ class SignUp extends React.Component {
   }
 
 	render() {
+		const { onRouteChange } = this.props;
 		return (
 			<div className="vh-100 dt w-100">
 				<main className="pa4 black-80 dtc v-mid tc animated fadeIn">
@@ -64,6 +65,7 @@ class SignUp extends React.Component {
 				      	className="b ph3 pv2 input-reset dib link bw1 bg-white b--solid b--light-red light-red fw7 pa3 br3 hover-white hover-bg-light-red pointer" 
 				      	type="submit" 
 				      	value="Sign Up"
+				      	onClick={() => onRouteChange('welcome')}
 				      />
 				    </div>
 				  </form>

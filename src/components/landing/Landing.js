@@ -11,16 +11,16 @@ class Landing extends React.Component {
 				    <h3 className="f5 f2-m f-subheadline-l fw4 tc">An application to improve your productivity</h3>
 				    <div className=''>
 				    	<input 
-			      	className="sign_in b ma3 ph3 pv2 input-reset dib link bw1 b--solid b--light-red light-red fw7 pa3 br3 hover-white hover-bg-light-red pointer" 
-			      	type="submit" 
-			      	value="Sign in"
-			      	onClick={() => onRouteChange('signin')}
+				      	className="sign_in b ma3 ph3 pv2 input-reset dib link bw1 b--solid b--light-red light-red fw7 pa3 br3 hover-white hover-bg-light-red pointer" 
+				      	type="submit" 
+				      	value="Sign in"
+				      	onClick={() => onRouteChange('signin')}
 			      	/>
 			      	<input 
 				      	className="sign_in b ph3 pv2 input-reset dib link bw1 b--solid b--black black fw7 pa3 br3 hover-white hover-bg-black pointer" 
 				      	type="submit" 
 				      	value="Sign Up"
-						onClick={() => onRouteChange('register')}
+								onClick={() => onRouteChange('signup')}
 			      	/>
 				    </div>
 			  	</div>
