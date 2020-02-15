@@ -2,7 +2,8 @@ import React from 'react';
 import SignIn from './components/signin/SignIn';
 import SignUp from './components/signup/SignUp';
 import Landing from './components/landing/Landing';
-import Welcome from './components/welcome/Welcome';
+import Navigation from './components/navigation/Navigation';
+import Notes from './components/notes/Notes';
 import './App.css';
 import Particles from 'react-particles-js';
 import particlesOptions from './assets/particlesjs-config.json';
@@ -34,7 +35,13 @@ class App extends React.Component {
     	<div className='App'>
     		<Particles className='particles' params={particlesOptions}/>
         { this.state.route === 'welcome'
-          ? <Welcome />
+          ? <div>
+              <Navigation />
+              {/*<div className='flex flex-wrap flex-columm flex-row-l ba br2 bw1 b--black'>
+                <Notes />
+                <Notes />
+              </div>*/}
+            </div>
           : (
               <div>
               {(() => {
