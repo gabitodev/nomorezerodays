@@ -3,14 +3,14 @@ import SignIn from './components/signin/SignIn';
 import SignUp from './components/signup/SignUp';
 import Landing from './components/landing/Landing';
 import Navigation from './components/navigation/Navigation';
-import Notes from './components/notes/Notes';
+/*import Notes from './components/notes/Notes';*/
 import './App.css';
 import Particles from 'react-particles-js';
 import particlesOptions from './assets/particlesjs-config.json';
 
 const initialState = {
   input: '',
-  route: 'landing',
+  route: 'welcome',
   isLoggedIn: false,
   user: {
     id: '',
@@ -36,7 +36,7 @@ class App extends React.Component {
     		<Particles className='particles' params={particlesOptions}/>
         { this.state.route === 'welcome'
           ? <div>
-              <Navigation />
+              <Navigation onRouteChange={this.onRouteChange} />
               {/*<div className='flex flex-wrap flex-columm flex-row-l ba br2 bw1 b--black'>
                 <Notes />
                 <Notes />
