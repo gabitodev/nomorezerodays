@@ -18,10 +18,10 @@ class Navigation extends React.Component {
 										<p>Notes</p>
 									</li>
 									<li>
-										<p >Todo</p>
+										<p>Todo</p>
 									</li>
 									<li>
-										<p onClick={() => onRouteChange('landing')}>Sign Out</p>
+										<p className='pointer' onClick={() => onRouteChange('landing')}>Sign Out</p>
 									</li>
 								</ul>
 							</div>
