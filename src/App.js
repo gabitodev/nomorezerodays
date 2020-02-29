@@ -37,7 +37,7 @@ class App extends React.Component {
         { this.state.route === 'welcome'
           ? <div>
               <Navigation onRouteChange={this.onRouteChange} />
-              <div>
+              <div className='Main'>
                 <Notes />
               </div>
             </div>
