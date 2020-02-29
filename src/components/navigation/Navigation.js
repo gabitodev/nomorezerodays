@@ -6,7 +6,7 @@ class Navigation extends React.Component {
 		const { onRouteChange } = this.props;
 		return (
 			<div>
-				<h3 className='user-info bg-light-red white'> Welcome Back!, Gabriel</h3>	
+				<h3 className='user-info bg-light-red white'> Welcome Back!, Gabriel</h3>
 				<div className='menu-wrap'>
 					<input type='checkbox' className='toggler'/>
 					<div className='hamburger bg-light-red'><div></div></div>

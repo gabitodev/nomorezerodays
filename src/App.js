@@ -3,7 +3,7 @@ import SignIn from './components/signin/SignIn';
 import SignUp from './components/signup/SignUp';
 import Landing from './components/landing/Landing';
 import Navigation from './components/navigation/Navigation';
-/*import Notes from './components/notes/Notes';*/
+import Notes from './components/notes/Notes';
 import './App.css';
 import Particles from 'react-particles-js';
 import particlesOptions from './assets/particlesjs-config.json';
@@ -37,10 +37,9 @@ class App extends React.Component {
         { this.state.route === 'welcome'
           ? <div>
               <Navigation onRouteChange={this.onRouteChange} />
-              {/*<div className='flex flex-wrap flex-columm flex-row-l ba br2 bw1 b--black'>
+              <div>
                 <Notes />
-                <Notes />
-              </div>*/}
+              </div>
             </div>
           : (
               <div>
