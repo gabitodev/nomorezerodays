@@ -14,6 +14,7 @@ class Notes extends React.Component {
 	this.handleInput = this.handleInput.bind(this);
 	this.addItem = this.addItem.bind(this);
 	this.deleteItem = this.deleteItem.bind(this);
+	this.setUpdate = this.setUpdate.bind(this);
 	}
 	
 	handleInput(e) {
@@ -47,19 +48,32 @@ class Notes extends React.Component {
 		})
 	}
 
+	setUpdate(text, key) {
+		const items = this.state.items;
+		items.forEach(item => {
+			if (item.key === key) {
+				item.text = text;
+			}
+		})
+		this.setState({items: items})
+	}
+
 	render() {
 		return (
 			<div>
 				<form onSubmit={this.addItem}>
 					<input 
 						type="text" 
-						placeholder="Create note..."
+						placeholder="Create Todo..."
 						value={this.state.currentItem.text}
 						onChange={this.handleInput}
 					 />
 					<button type="submit">Add</button>
 				</form>
-				<ListItems items={this.state.items} deleteItem={this.deleteItem}/>
+				<ListItems 
+					items={this.state.items} 
+					deleteItem={this.deleteItem} 
+					setUpdate={this.setUpdate}/>
 			</div>
 		)
 	}
