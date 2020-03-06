@@ -20,7 +20,7 @@ form {
 	color: blue;
 }
 
-input {
+.todo {
 	border-bottom: 2px solid #aaa;
 	border-top: none;
 	border-right: none;

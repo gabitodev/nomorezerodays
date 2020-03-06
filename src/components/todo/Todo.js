@@ -1,8 +1,8 @@
 import React from 'react';
 import ListItems from './ListItems';
-import './notes.css';
+import './todo.css';
 
-class Notes extends React.Component {
+class Todo extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state= {
@@ -30,6 +30,7 @@ class Notes extends React.Component {
 	addItem(e) {
 		e.preventDefault(); // Previene lo default del boton.
 		const newItem = this.state.currentItem;
+		console.log(newItem);
 		if (newItem.text !== '') {
 			const newItems = [...this.state.items, newItem];
 			this.setState({
@@ -64,7 +65,7 @@ class Notes extends React.Component {
 			<div className='bg-white ma2 br3 ba bw1 b--light-silver w-50-ns'>
 				<form className='f3 bg-light-red flex justify-between' onSubmit={this.addItem}>
 					<input
-						className='pa2 w-80 outline-0 bg-light-red white' 
+						className='todo pa2 w-80 outline-0 bg-light-red white' 
 						type='text' 
 						placeholder='Create Todo...'
 						value={this.state.currentItem.text}
@@ -83,4 +84,4 @@ class Notes extends React.Component {
 	}
 }
 
-export default Notes;
+export default Todo;
