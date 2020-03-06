@@ -1,5 +1,6 @@
 import React from 'react';
 import ListItems from './ListItems';
+import './notes.css';
 
 class Notes extends React.Component {
 	constructor(props) {
@@ -60,20 +61,23 @@ class Notes extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<form onSubmit={this.addItem}>
-					<input 
-						type="text" 
-						placeholder="Create Todo..."
+			<div className='bg-white ma2 br3 ba bw1 b--light-silver w-50-ns'>
+				<form className='f3 bg-light-red flex justify-between' onSubmit={this.addItem}>
+					<input
+						className='pa2 w-80 outline-0 bg-light-red white' 
+						type='text' 
+						placeholder='Create Todo...'
 						value={this.state.currentItem.text}
 						onChange={this.handleInput}
 					 />
-					<button type="submit">Add</button>
+					<button className='w-20 flex justify-center bg-white outline-0' type='submit'><ion-icon name="add"></ion-icon></button>
 				</form>
-				<ListItems 
+				<div className='overflow-auto vh-50'>
+					<ListItems
 					items={this.state.items} 
 					deleteItem={this.deleteItem} 
 					setUpdate={this.setUpdate}/>
+				</div>
 			</div>
 		)
 	}
