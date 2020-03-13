@@ -30,7 +30,6 @@ class Todo extends React.Component {
 	addItem(e) {
 		e.preventDefault(); // Previene lo default del boton.
 		const newItem = this.state.currentItem;
-		console.log(newItem);
 		if (newItem.text !== '') {
 			const newItems = [...this.state.items, newItem];
 			this.setState({
