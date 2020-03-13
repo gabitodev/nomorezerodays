@@ -9,20 +9,25 @@ class Todo extends React.Component {
 			items: [],
 			currentItem: {
 				text: '',
-				key: ''
+				key: '',
+				checked: false
 			}
 		}
 	this.handleInput = this.handleInput.bind(this);
 	this.addItem = this.addItem.bind(this);
 	this.deleteItem = this.deleteItem.bind(this);
 	this.setUpdate = this.setUpdate.bind(this);
+	this.completedCount = this.completedCount.bind(this);
+	this.changeChecked = this.changeChecked.bind(this);
+	this.incompleteCount = this.incompleteCount.bind(this);
 	}
 	
 	handleInput(e) {
 		this.setState({
 			currentItem: {
 				text: e.target.value,
-				key: Date.now()
+				key: Date.now(),
+				checked: false
 			}
 		});
 	}
@@ -36,7 +41,8 @@ class Todo extends React.Component {
 				items: newItems,
 				currentItem: {
 					text: '',
-					key: ''
+					key: '',
+					checked: false
 				}
 			});
 		}
@@ -59,6 +65,20 @@ class Todo extends React.Component {
 		this.setState({items: items})
 	}
 
+	changeChecked(idx) {
+		const items = this.state.items;
+		items[idx].checked = !items[idx].checked;
+		this.setState({items});
+	}
+	
+	incompleteCount() {
+		return this.state.items.filter(item => !item.checked).length;
+	}
+
+	completedCount() {
+		return this.state.items.filter(item => item.checked).length;
+	}
+
 	render() {
 		return (
 			<div className='bg-white ma2 br3 ba bw1 b--light-silver w-50-ns'>
@@ -74,9 +94,13 @@ class Todo extends React.Component {
 				</form>
 				<div className='overflow-auto vh-50'>
 					<ListItems
+					changeChecked={this.changeChecked}
 					items={this.state.items} 
 					deleteItem={this.deleteItem} 
 					setUpdate={this.setUpdate}/>
+				</div>
+				<div>
+					<p> All items: {this.state.items.length} Completed: {this.completedCount()} Incompleted : {this.incompleteCount()}</p>
 				</div>
 			</div>
 		)

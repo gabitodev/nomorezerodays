@@ -2,13 +2,14 @@ import React from 'react';
 
 class ListItems extends React.Component {
 	render() {
-		const { items, deleteItem, setUpdate } = this.props;
-		const list = items.map(item => {
+		const { items, deleteItem, setUpdate, changeChecked } = this.props;
+		const list = items.map((item, idx) => {
 			return (
 				<div className='list' key={item.key}>
 					<p className='flex justify-between f4 animated fadeIn a3 d2 reverse'>
+					<input type="checkbox" defaultChecked={item.checked} onChange={() => changeChecked(idx)}/>
 						<input 
-							className={`light-red pa2 w-80 outline-0 bn`}
+							className='light-red pa2 w-80 outline-0 bn'
 							type='text' 
 							id={item.key} 
 							value={item.text} 

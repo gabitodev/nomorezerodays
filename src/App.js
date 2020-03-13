@@ -4,7 +4,7 @@ import SignUp from './components/signup/SignUp';
 import Landing from './components/landing/Landing';
 import Navigation from './components/navigation/Navigation';
 import Todo from './components/todo/Todo';
-import Quotes from './components/quotes/Quotes';
+// import Quotes from './components/quotes/Quotes';
 import './App.css';
 import Particles from 'react-particles-js';
 import particlesOptions from './assets/particlesjs-config.json';
@@ -40,7 +40,6 @@ class App extends React.Component {
               <Navigation onRouteChange={this.onRouteChange} />
               <div className='Main'>
                 <Todo />
-                <Quotes />
               </div>
             </div>
           : (

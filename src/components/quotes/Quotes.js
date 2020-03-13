@@ -39,8 +39,8 @@ class Quotes extends React.Component {
 		} else {
 			return (
 				<div className='bg-white'>
-					<p> Frase: {ramdomQuote.text} </p>
-					<p> Autor: {ramdomQuote.author} </p>
+					<p> {ramdomQuote.text} </p>
+					<p> ~ {ramdomQuote.author} ~ </p>
 				</div>
 			)
 		}
