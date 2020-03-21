@@ -23,3 +23,7 @@ form {
 	border-left: none;
 	border-top-left-radius: 0.3rem;
 }
+
+.status_bar {
+	font-size: 85%;
+}

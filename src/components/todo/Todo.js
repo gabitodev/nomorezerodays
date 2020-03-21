@@ -90,7 +90,7 @@ class Todo extends React.Component {
 						value={this.state.currentItem.text}
 						onChange={this.handleInput}
 					 />
-					<button className='w-20 flex justify-center bg-white outline-0' type='submit'><ion-icon name="add"></ion-icon></button>
+					<button className='w-20 flex justify-center bg-white outline-0' type='submit'><ion-icon name='add'></ion-icon></button>
 				</form>
 				<div className='overflow-auto vh-50'>
 					<ListItems
@@ -100,7 +100,11 @@ class Todo extends React.Component {
 					setUpdate={this.setUpdate}/>
 				</div>
 				<div>
-					<p> All items: {this.state.items.length} Completed: {this.completedCount()} Incompleted : {this.incompleteCount()}</p>
+					<p className='status_bar bt bw1 b--light-silver pa1 tc ma0 flex justify-center w-100'> 
+						<span className='bg-light-red br3 ma1 pa1 white'>All: {this.state.items.length}</span> 
+						<span className='bg-green br3 ma1 pa1 white'>Completed: {this.completedCount()}</span>
+						<span className='bg-red br3 ma1 pa1 white'>Incompleted : {this.incompleteCount()}</span>
+					</p>
 				</div>
 			</div>
 		)
