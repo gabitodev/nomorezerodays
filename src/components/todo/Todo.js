@@ -101,9 +101,9 @@ class Todo extends React.Component {
 				</div>
 				<div>
 					<p className='status_bar bt bw1 b--light-silver pa1 tc ma0 flex justify-center w-100'> 
-						<span className='bg-light-red br3 ma1 pa1 white'>All: {this.state.items.length}</span> 
-						<span className='bg-green br3 ma1 pa1 white'>Completed: {this.completedCount()}</span>
-						<span className='bg-red br3 ma1 pa1 white'>Incompleted : {this.incompleteCount()}</span>
+						<span className='bg-light-red br3 ma1 pa2 white'>All: {this.state.items.length}</span> 
+						<span className='bg-green br3 ma1 pa2 white'>Completed: {this.completedCount()}</span>
+						<span className='bg-red br3 ma1 pa2 white'>Incompleted : {this.incompleteCount()}</span>
 					</p>
 				</div>
 			</div>

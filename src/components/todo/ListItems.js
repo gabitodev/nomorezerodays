@@ -1,4 +1,5 @@
 import React from 'react';
+import './listitems.css';
 
 class ListItems extends React.Component {
 	render() {
@@ -7,7 +8,9 @@ class ListItems extends React.Component {
 			return (
 				<div className='list' key={item.key}>
 					<p className='flex justify-between f4 animated fadeIn a3 d2 reverse'>
-					<input type="checkbox" defaultChecked={item.checked} onChange={() => changeChecked(idx)}/>
+						<label className='checkbox__container'>
+							<input type="checkbox" defaultChecked={item.checked} onChange={() => changeChecked(idx)}/><span className='checkmark'></span>
+						</label>
 						<input 
 							className='light-red pa2 w-80 outline-0 bn'
 							type='text' 

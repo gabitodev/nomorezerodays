@@ -4,6 +4,13 @@
 
 .Main {
   padding-top: 60px;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+.quote {
+  height: 25vh;
+  margin: 0 0.5rem 0 0.5rem;
 }
 
 .App-logo {
