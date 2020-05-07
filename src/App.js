@@ -11,7 +11,7 @@ import particlesOptions from './assets/particlesjs-config.json';
 
 const initialState = {
   input: '',
-  route: 'welcome',
+  route: 'landing',
   isLoggedIn: false,
   user: {
     id: '',

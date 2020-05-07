@@ -81,16 +81,16 @@ class Todo extends React.Component {
 
 	render() {
 		return (
-			<div className='bg-white ma2 br3 ba bw1 b--light-silver w-50-ns'>
+			<div className='mierda_mierda ma2 br3 ba bw1 w-50-ns'>
 				<form className='f3 bg-light-red flex justify-between' onSubmit={this.addItem}>
 					<input
-						className='todo pa2 w-80 outline-0 bg-light-red white' 
+						className='todo pa2 w-80 outline-0' 
 						type='text' 
 						placeholder='Create Todo...'
 						value={this.state.currentItem.text}
 						onChange={this.handleInput}
 					 />
-					<button className='w-20 flex justify-center bg-white outline-0' type='submit'><ion-icon name='add'></ion-icon></button>
+					<button className='add_btn w-20 flex justify-center outline-0' type='submit'><ion-icon name='add'></ion-icon></button>
 				</form>
 				<div className='overflow-auto vh-50'>
 					<ListItems
@@ -100,8 +100,8 @@ class Todo extends React.Component {
 					setUpdate={this.setUpdate}/>
 				</div>
 				<div>
-					<p className='status_bar bt bw1 b--light-silver pa1 tc ma0 flex justify-center w-100'> 
-						<span className='bg-light-red br3 ma1 pa2 white'>All: {this.state.items.length}</span> 
+					<p className='status_bar bt bw1 pa1 tc ma0 flex justify-center w-100'> 
+						<span className='all__btn br3 ma1 pa2 white'>All: {this.state.items.length}</span> 
 						<span className='bg-green br3 ma1 pa2 white'>Completed: {this.completedCount()}</span>
 						<span className='bg-red br3 ma1 pa2 white'>Incompleted : {this.incompleteCount()}</span>
 					</p>

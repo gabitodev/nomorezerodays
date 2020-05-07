@@ -12,12 +12,12 @@ class ListItems extends React.Component {
 							<input type="checkbox" defaultChecked={item.checked} onChange={() => changeChecked(idx)}/><span className='checkmark'></span>
 						</label>
 						<input 
-							className='light-red pa2 w-80 outline-0 bn'
+							className='text__area pa2 w-80 outline-0 bn'
 							type='text' 
 							id={item.key} 
 							value={item.text} 
 							onChange={(e) => setUpdate(e.target.value, item.key)}/>
-						<span onClick={() => deleteItem(item.key)} className='pointer w-20 bg-light-gray red flex justify-center items-center hover-bg-red hover-white link'>&times;</span>
+						<span onClick={() => deleteItem(item.key)} className='delete__btn pointer w-20 red flex justify-center items-center hover-bg-red hover-white link'>&times;</span>
 					</p>
 				</div>
 			)

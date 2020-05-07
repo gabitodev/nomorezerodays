@@ -1,0 +1,30 @@
+.main__div {
+	background-color: #222831;
+	border-color: #00adb5;
+}
+
+.title {
+	color: #00adb5;
+}
+
+.labels {
+	color: #00adb5;
+}
+
+.inputs {
+	background-color: #282c37;
+	border-color: #00adb5;
+	color: #eeeeee;
+}
+
+.signin__btn {
+	background-color: #222831;
+	border-color: #00adb5;
+	color: #00adb5;
+	transition: 0.3s;
+}
+
+.signin__btn:hover {
+	background-color: #00adb5;
+	color: #222831;
+}

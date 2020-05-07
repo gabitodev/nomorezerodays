@@ -1,3 +1,14 @@
+.text__area {
+	background-color: #222831;
+	color: #eeeeee;
+}
+
+.delete__btn {
+	background-color: #393e46;
+}
+
+
+
 .checkbox__container input {
 	display: none;
 }
@@ -14,7 +25,7 @@
 	display: inline-block;
 	width: 25px;
 	height: 25px;
-	background-color: #eee;
+	background-color: #393e46;
 	cursor: pointer;
 	left: 0.7rem;
 	top: -0.7rem;
@@ -22,7 +33,7 @@
 	transition: all 0.4s linear;
 }
 .checkbox__container input:checked + .checkmark {
-	background-color: #1faa00;
+	background-color: #19A974;
 }
 
 .checkbox__container input:checked + .checkmark:after {

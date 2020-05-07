@@ -1,4 +1,5 @@
 import React from 'react';
+import './quotes.css';
 
 class Quotes extends React.Component {
 	constructor(props) {
@@ -35,10 +36,10 @@ class Quotes extends React.Component {
 		if (error) {
 			return <div>Error: {error.message}</div>
 		} else if (!isLoaded) {
-			return <div className=''>Loading...</div>
+			return <div className='loading br3 ba bw1'>Loading...</div>
 		} else {
 			return (
-				<div className='bg-white br3 ba bw1 b--light-silver'>
+				<div className='message br3 ba bw1 '>
 					<p> {ramdomQuote.text} </p>
 					<p> ~ {ramdomQuote.author} ~ </p>
 				</div>

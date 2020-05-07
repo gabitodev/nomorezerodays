@@ -1,3 +1,19 @@
 .sign_in {
-	background-color: #f5f1ed;
+	background-color: #00adb5;
+	border-color: #222831;
+	color: #222831;
+	transition: 0.3s;
+}
+
+.sign_in:hover {
+	background-color: #222831;
+	color: #00adb5;
+}
+
+h1 {
+	color: #00adb5;
+}
+
+h3 {
+	color: #eeeeee;
 }
